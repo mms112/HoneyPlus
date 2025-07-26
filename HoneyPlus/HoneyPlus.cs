@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
 using System;
+using HarmonyLib;
 
 namespace HoneyPlus
 {
@@ -66,6 +67,8 @@ namespace HoneyPlus
       AddLocalizations();
 
       HoneyPlusAssetBundle.Unload(false);
+
+      Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), PluginGUID);
     }
 
     private void AddCustomItems()
