@@ -158,8 +158,7 @@ namespace HoneyPlus
 
     private void AddLocalizations()
     {
-        Localization = new CustomLocalization();
-        LocalizationManager.Instance.AddLocalization(Localization);
+        Localization = LocalizationManager.Instance.GetLocalization();
 
         string enTranslation = AssetUtils.LoadTextFromResources(enTranslationFileName, ModAssembly);
         Localization.AddJsonFile("English", enTranslation);
@@ -184,7 +183,7 @@ namespace HoneyPlus
 
         string ruTranslation = AssetUtils.LoadTextFromResources(ruTranslationFileName, ModAssembly);
         Localization.AddJsonFile("Russian", ruTranslation);
-        }
+    }
 
     private void AddItemConversions()
     {
