@@ -91,7 +91,7 @@ namespace HoneyPlus
             }
 
             // Stops Tar/Royal Jelly being added as an item, only as a recipe above
-            if ((recipeConfig.Item == "Tar") || (recipeConfig.Item == "RoyalJelly"))
+            if ((recipeConfig.Item == "Tar") || (recipeConfig.Item == "RoyalJelly") || (recipeConfig.Name == "$custom_item_honeysausages4"))
                 continue;
             CustomItem customItem = new CustomItem(HoneyPlusAssetBundle.LoadAsset<GameObject>(recipeConfig.Item), fixReference: true);
             ItemManager.Instance.AddItem(customItem);
