@@ -220,7 +220,7 @@ namespace HoneyPlus
             new AcceptableValueRange<bool>(false, true),
             new ConfigurationManagerAttributes { IsAdminOnly = true }));
 
-        useVanillaRecipeChanges = Config.Bind("Tweaks", "Change vanilla recipes", true,
+        useVanillaRecipeChanges = Config.Bind("Tweaks", "Change vanilla recipes", false,
             new ConfigDescription("Set to false to disable changing of vanilla recipes (Wolf & Boar Jerky) to hand crafting",
             new AcceptableValueRange<bool>(false, true),
             new ConfigurationManagerAttributes { IsAdminOnly = true }));
