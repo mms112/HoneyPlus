@@ -2,10 +2,12 @@ using HarmonyLib;
 
 namespace HoneyPlus
 {
-    [HarmonyPatch(typeof(CraftingStation), nameof(CraftingStation.CheckUsable))]
-    public static class CraftingStation_CheckUsable_Patch
+    [HarmonyPatch]
+    public static class ApiaryPatch
     {
-        private static void Postfix(CraftingStation __instance, ref bool __result, bool showMessage)
+        [HarmonyPatch(typeof(CraftingStation), nameof(CraftingStation.CheckUsable))]
+        [HarmonyPostfix]
+        static void CheckApiary(CraftingStation __instance, ref bool __result, bool showMessage)
         {
             if (!__result)
                 return;
@@ -43,6 +45,15 @@ namespace HoneyPlus
                     return;
                 }
             }
+        }
+
+        [HarmonyPatch(typeof(Beehive), nameof(Beehive.HaveFreeSpace))]
+        [HarmonyPrefix]
+        static void CheckBeehive(Beehive __instance)
+        {
+            __instance.m_maxCover = 0.30f;
+            Cover.GetCoverForPoint(__instance.m_coverPoint.position, out var coverPercentage, out var _);
+            Jotunn.Logger.LogDebug("Beehive cover: " + coverPercentage);
         }
     }
 }
