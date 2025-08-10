@@ -605,7 +605,7 @@
     "Amount": 2,
     "CraftingStation": "piece_cauldron",
     "MinStationLevel": 4,
-    "Enabled": true,
+    "Enabled": false,
     "Requirements": 
     [
       {
