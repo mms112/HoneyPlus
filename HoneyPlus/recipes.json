@@ -13,6 +13,10 @@
         "Amount": 1
       },
       {
+        "Item": "Dandelion",
+        "Amount": 1
+      },
+      {
         "Item": "Honey",
         "Amount": 2
       }
@@ -29,6 +33,10 @@
     [
       {
         "Item": "CookedDeerMeat",
+        "Amount": 1
+      },
+      {
+        "Item": "Raspberry",
         "Amount": 1
       },
       {
@@ -51,6 +59,10 @@
         "Amount": 1
       },
       {
+        "Item": "Dandelion",
+        "Amount": 1
+      },
+      {
         "Item": "Honey",
         "Amount": 2
       }
@@ -61,12 +73,20 @@
     "Item": "HoneyTeriyakiSalmon",
     "Amount": 1,
     "CraftingStation": "piece_apiary",
-    "MinStationLevel": 1,
+    "MinStationLevel": 2,
     "Enabled": true,
     "Requirements": 
     [
       {
         "Item": "FishCooked",
+        "Amount": 1
+      },
+      {
+        "Item": "Raspberry",
+        "Amount": 1
+      },
+      {
+        "Item": "Blueberries",
         "Amount": 1
       },
       {
@@ -124,6 +144,14 @@
     [
       {
         "Item": "SerpentMeatCooked",
+        "Amount": 1
+      },
+      {
+        "Item": "Raspberry",
+        "Amount": 1
+      },
+      {
+        "Item": "Blueberries",
         "Amount": 1
       },
       {
